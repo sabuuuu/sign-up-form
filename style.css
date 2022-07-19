@@ -1,0 +1,171 @@
+:root{
+    --bg-color : rgba(40,42,55,255);
+    --text-color : #fefeff;
+    --button-color : #1c90f4;
+    --input-color : #323645;
+    --link-color : #216bb2;
+    --other-text : #939aa8;
+}
+
+@font-face {
+    font-family: fbold;
+    src: url(font/fbold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: fregular;
+    src: url(font/fregular.ttf);
+    font-weight: 400;
+}
+
+button{
+    font-family: fregular ,sans-serif;
+}
+body{
+    font-family: fregular ,sans-serif;
+    margin:0;
+    padding: 0;
+    color: var(--text-color);
+    background-image: linear-gradient(to left ,rgba(40,42,55,0.5),rgba(40,42,55,1) ,rgba(40,42,55,1)),url(bg.jpg);
+}
+
+header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 25px 0 0 40px;
+}
+
+header p {
+    margin: 0;
+    color: var(--text-color);
+}
+.image {
+    display: flex;
+}
+img {
+    height: 30px;
+    width: 30px;
+    border-radius: 200px;
+    filter: brightness(2000%);
+    margin-top: -10px;
+    margin-right: 15px;
+}
+.home {
+    margin: 0 0 0 150px;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    color: var(--other-text);
+    font-size: large;
+    cursor: pointer;
+    margin: 0 25px 0 45px;
+}
+
+p {
+    color: var(--other-text);
+}
+
+.dot {
+    color: var(--link-color);
+    font-family: fbold;
+    font-size: larger;
+}
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+.container {
+    margin: 15px;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.input-box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 25px;
+}
+
+#fname ,#email,#pass ,#lname ,#tel , #cpass {
+    padding: 15px;
+}
+
+input{
+    height: 45px;
+    width: 100%;
+    font-family: fregular ,sans-serif;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    padding-left: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: var(--input-color);
+    color: var(--text-color);
+}
+
+input:focus , input:valid{
+    border: 1px solid;
+    border-color: var(--button-color);
+}
+
+input :invalid {
+    border-color: #f51d46;
+}
+
+form .button {
+    margin: 15px;
+    height: 45px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--button-color);
+    border: none;
+    color: var(--text-color);
+}
+
+
+@media (max-width : 584px) {
+    .home {
+        margin: 0 20px;
+        font-size: small;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: small;
+    }
+
+    .container{
+        max-width: 100%;
+        margin: 0;
+        padding: 0 0 0 15px;
+    }
+    .input-box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    input {
+        height: 40px;
+        width: 90%;
+    }
+
+    form .button {
+        height: 40px;
+        width: 200px;
+        margin: 0;
+        margin-top: 15px;
+    }
+    
+}
